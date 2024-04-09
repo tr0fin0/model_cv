@@ -17,6 +17,7 @@
 \usepackage{tgpagella} % Use the TeX Gyre Pagella font throughout the document
 \usepackage[T1]{fontenc}
 \usepackage{microtype} % Slightly tweaks character and word spacings for better typography
+\usepackage{enumitem}
 
 \pagestyle{empty} % Stop page numbering
 
@@ -27,13 +28,18 @@
 \newenvironment{indentsection} % Defines the indentsection environment which indents text in sections titles
 {\begin{list}{}{\setlength{\leftmargin}{10pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
 
-\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}\vspace{0.3em}} % Main title (name) with date of birth or subtitle
+\newenvironment{noindentsection} % Defines the indentsection environment which indents text in sections titles
+{\begin{list}{}{\setlength{\leftmargin}{0pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
 
-\newcommand*\roottitle[1]{\subsection*{#1}\vspace{-0.3em}\nopagebreak[4]} % Top level sections in the template
 
-\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{indentsection}\nopagebreak[4]} % Section title used for a new employer
 
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{#2}#3\end{indentsection}\nopagebreak[4]} % Section title used for a new position
+\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\hfill\small#2\vspace{1mm}} % Main title (name) with date of birth or subtitle
+
+\newcommand*\roottitle[1]{\vspace{+2mm}\subsection*{#1}\spacedhrule{-1mm}{+0mm}\nopagebreak[4]} % Top level sections in the template
+
+\newcommand{\headedsection}[3]{\vspace{+5mm}\nopagebreak[4]\begin{noindentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new employer
+
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{noindentsection}\item[]\textbf{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new position
 
 \newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]} % Body text (indented)
 
