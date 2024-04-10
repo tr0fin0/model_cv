@@ -1,0 +1,98 @@
+%% tpack_cv.sty 
+%% --------------------------------------------- 
+%% A package creeated for cv files
+%% 
+%% by Guilherme Trofino.
+%% ---------------------------------------------
+
+
+
+
+% ----------------------------------------------
+%               Presets
+% ----------------------------------------------
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tpack_cv}[2024/04/10 Trofino's Package]
+
+
+
+% ----------------------------------------------
+%               Packages: Required
+% ----------------------------------------------
+
+\usepackage{geometry}
+\usepackage{enumitem, multicol}
+\usepackage[english, french, portuguese]{babel}    
+
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+
+\usepackage{mdwlist}
+\usepackage{relsize}
+
+\usepackage{microtype, tgpagella}
+\usepackage[T1]{fontenc}
+
+
+
+
+% ----------------------------------------------
+%               Packages: Customization
+% ----------------------------------------------
+
+\geometry{
+    margin=10mm
+}
+
+
+\hypersetup{
+    colorlinks=false,
+    urlbordercolor=magenta
+}
+
+\setlength{\multicolsep}{3.0pt plus 1.0pt minus 0.75pt}
+
+
+
+% ----------------------------------------------
+%               Commands: Customization
+% ----------------------------------------------
+
+
+\newenvironment{indentsection} % Defines the indentsection environment which indents text in sections titles
+{\begin{list}{}{\setlength{\leftmargin}{10pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
+
+\newenvironment{noindentsection} % Defines the indentsection environment which indents text in sections titles
+{\begin{list}{}{\setlength{\leftmargin}{0pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
+
+
+
+\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\hfill\small#2\vspace{1mm}} % Main title (name) with date of birth or subtitle
+
+\newcommand*\roottitle[1]{\vspace{+2mm}\subsection*{#1}\spacedhrule{-1mm}{+0mm}\nopagebreak[4]} % Top level sections in the template
+
+\newcommand{\headedsection}[3]{\vspace{+5mm}\nopagebreak[4]\begin{noindentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new employer
+
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{noindentsection}\item[]\textbf{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new position
+
+\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]} % Body text (indented)
+
+\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}}\item[\hspace{\newparindent}\textbf{#1}]#2\end{basedescript}\vspace{-1.7em}} % Section title where body text starts immediately after the title
+
+\newcommand*\acr[1]{\textscale{.85}{#1}} % Custom acronyms command
+
+\newcommand*\bull{\ \ \raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}} \ } % Custom bullet point for separating content
+
+\newlength{\newparindent} % It seems not to work when simply using \parindent...
+\addtolength{\newparindent}{\parindent}
+
+\newlength{\doubleparindent} % A double \parindent...
+\addtolength{\doubleparindent}{\parindent}
+
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]} % A custom vspace command with custom before and after spacing lengths
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]} % A custom vspace command with custom before and after spacing lengths that do not break the page
+
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}} % Defines a horizontal line with some vertical space before and after it
