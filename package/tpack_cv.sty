@@ -23,8 +23,9 @@
 % ----------------------------------------------
 
 \usepackage{geometry}
-\usepackage{enumitem, multicol}
-\usepackage[english, french, portuguese]{babel}    
+\usepackage{enumitem, multicol, subfiles, titlesec}
+\usepackage[english, french, portuguese]{babel}
+\usepackage{iflang}  
 
 \usepackage{hyperref}
 
@@ -38,7 +39,6 @@
 
 
 
-
 % ----------------------------------------------
 %               Packages: Customization
 % ----------------------------------------------
@@ -47,13 +47,14 @@
     margin=10mm
 }
 
-
 \hypersetup{
     colorlinks=false,
     urlbordercolor=magenta
 }
 
 \setlength{\multicolsep}{3.0pt plus 1.0pt minus 0.75pt}
+
+\pagenumbering{gobble}
 
 
 
@@ -62,37 +63,93 @@
 % ----------------------------------------------
 
 
-\newenvironment{indentsection} % Defines the indentsection environment which indents text in sections titles
-{\begin{list}{}{\setlength{\leftmargin}{10pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
+% LaTeX modifications
+\renewcommand{\maketitle}{
+    \noindent{\LARGE\textbf{\@author}}
+    \hfill
+    \small\today\version
+    \vspace{0.5mm}
 
-\newenvironment{noindentsection} % Defines the indentsection environment which indents text in sections titles
-{\begin{list}{}{\setlength{\leftmargin}{0pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}}{\end{list}}
+    \contactinfo
+}
+
+\titleformat
+    {\section}              % Part
+    [block]                 % Part Shape
+    {\normalfont\bf\large}  % Font Size
+    {\thesection. }         % Label Numbering
+    {0mm}                   % Part Separation
+    {}                      % Code Before
+    [{\titlerule[0.25mm]}]   % Code After
+
+    \titlespacing*{\section}{0.0mm}{7.5mm}{0.0mm}
 
 
+%   localization variables
+\newcommand{\version}{
+    \IfLanguageName{english}{[EN version]}{
+        \IfLanguageName{french}{[FR version]}{
+            not defined
+        }
+    }
+}
 
-\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\hfill\small#2\vspace{1mm}} % Main title (name) with date of birth or subtitle
+\newcommand*{\cvbody}{
+    \IfLanguageName{english}{\subfile{translation/cv_en.tex}}{
+        \IfLanguageName{french}{\subfile{translation/cv_fr.tex}}{
+            not defined
+        }
+    }
+}
 
-\newcommand*\roottitle[1]{\vspace{+2mm}\subsection*{#1}\spacedhrule{-1mm}{+0mm}\nopagebreak[4]} % Top level sections in the template
+% \newcommand*{}{
+%     \IfLanguageName{english}{}{
+%         \IfLanguageName{french}{}{
+%             not defined
+%         }
+%     }
+% }
 
-\newcommand{\headedsection}[3]{\vspace{+5mm}\nopagebreak[4]\begin{noindentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new employer
 
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{noindentsection}\item[]\textbf{#1}\hfill#2#3\end{noindentsection}\nopagebreak[4]} % Section title used for a new position
+% cv sections
+\newcommand{\contactinfo}{
+    \noindent\href{mailto:guitrofino@gmail.com}{guitrofino@gmail.com}
+    \qquad\href{https://www.linkedin.com/in/guilherme-trofino/}{LinkedIn: guilherme-trofino}
+    \qquad\href{https://github.com/tr0fin0}{GitHub: tr0fin0}
+    \qquad+33 07 49 18 55 00
+}
 
-\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]} % Body text (indented)
+\newcommand{\summary}[2]{
+    \begin{multicols}{2}
+    \noindent \textit{#1}
 
-\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}}\item[\hspace{\newparindent}\textbf{#1}]#2\end{basedescript}\vspace{-1.7em}} % Section title where body text starts immediately after the title
+    \columnbreak
 
-\newcommand*\acr[1]{\textscale{.85}{#1}} % Custom acronyms command
+    \noindent #2
+    \end{multicols}
+}
 
-\newcommand*\bull{\ \ \raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}} \ } % Custom bullet point for separating content
 
-\newlength{\newparindent} % It seems not to work when simply using \parindent...
-\addtolength{\newparindent}{\parindent}
+% cv building block
+\newcommand{\topicblock}[5]{
+    \vspace{5mm}
+    \noindent\textscale{1.20}{#1}\\
+    \textbf{#2}\hfill#3\qquad#4
 
-\newlength{\doubleparindent} % A double \parindent...
-\addtolength{\doubleparindent}{\parindent}
+    \begin{indented}
+        \item[]#5
+    \end{indented}
+}
 
-\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]} % A custom vspace command with custom before and after spacing lengths
-\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]} % A custom vspace command with custom before and after spacing lengths that do not break the page
+\newenvironment{indented}{
+    \begin{list}{}{
+        \setlength{\leftmargin}{5mm}
+        \setlength{\parsep}{0mm}
+        \setlength{\parskip}{0mm}
+        \setlength{\itemsep}{0mm}
+        \setlength{\topsep}{0mm}
+    }}{\end{list}}
 
-\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}} % Defines a horizontal line with some vertical space before and after it
+\newcommand{\topicline}[2]{
+    \textbf{#1}: #2\\
+}
