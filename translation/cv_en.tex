@@ -1,42 +1,75 @@
-\documentclass[class=article, crop=false]{standalone}
+\documentclass[../cv.tex]{subfiles}
 
 \begin{document}
-\section*{Summary}
-\summary{I'm Guilherme, a 23-year-old Brazilian student from UNICAMP, pursuing since 2022 a 3-year double degree exchange program at ENSTA Paris master's program.}{I'm currently carrying out my 2nd gap year internship at Sysnav developing and validating embedded systems with magneto-inertial navigation technology.}
+\columnratio{\columnsize}
+\begin{paracol}{2}
+    \maketitle
 
+    \section*{EXPERIENCES}
+    \topicblock{Embedded Hardware Designer Intern}{\href{https://www.sysnav.fr/}{Sysnav}}{Vernon, France}{04/2024 -- 09/2024}{In collaboration with an electronics engineer, I helped design a testing tool for the Syde product, enabling the creation of usage scenarios through a Python library that communicated via UART with an STM32H7 programmed in C.\\
 
-\section*{Experience}
-\topicblock{Embedded Hardware Designer Intern}{\href{https://www.sysnav.fr/}{Sysnav}}{Vernon, France}{04/2024 -- 09/2024}{Experience in testing, validating, and investigating electronic systems. Skilled in electronic system design and conception, offering valuable contributions to project success.}
+    This allowed for the automated simulation of various scenarios, scaling the quality control process after the product's production.}{C, Git and Python.}
 
-\topicblock{Retail Vendor Manager Intern}{\href{https://www.aboutamazon.fr/}{Amazon France}}{Clichy, France}{09-2023 -- 03/2024}{In collaboration with a Senior Vendor Manager, I helped provide tools to optimize business performance and drive sales growth. This included an Excel macro to identify licensed selection twenth times faster, allowing deep dives in large datasets, uncovering trends, extracting customer insights, and taking action.\\
+    \topicblock{Retail Vendor Manager Intern}{\href{https://www.aboutamazon.fr/}{Amazon}}{Clichy, France}{09-2023 -- 03/2024}{In collaboration with a Senior Vendor Manager, I helped provide tools to optimize business performance and drive sales growth. This included an Excel macro to identify licensed selection twenth times faster, allowing deep dives in large datasets, uncovering trends, extracting customer insights, and taking action.\\
 
-I also developed a comprehensive and visually appealing Dashboard in Excel, facilitating benchmarking at various levels of granularity, simplifying the identification of growth opportunities and the implementation of new strategies for the team.}
+    I also developed a comprehensive and visually appealing Dashboard in Excel, facilitating benchmarking at various levels of granularity, simplifying the identification of growth opportunities and the implementation of new strategies for the team.}{Excel, PowerPoint and VBA.}
 
-\topicblock{Neuroscience Research Intern}{\href{https://www.sorbonne-universite.fr/}{Sorbonne Université}}{Paris, France}{05/2023 -- 08/2023}{Developing a user-friendly simulation environment using Webots and Python, facilitating the assessment of the sensorimotor modelization of the hippocampus based on the framework proposed by Benoît Girard and Sylvain Argentieri.}
+    \topicblock{Neuroscience Research Intern}{\href{https://www.isir.upmc.fr/}{ISIR}, \href{https://www.sorbonne-universite.fr/}{Sorbonne Université}}{Paris, France}{05/2023 -- 08/2023}{Developing a user-friendly simulation environment using Webots and Python, facilitating the assessment of the sensorimotor modelization of the hippocampus based on the framework proposed by Benoît Girard and Sylvain Argentieri.}{Git and Python.}
 
-\topicblock{Head of Team}{\href{}{Phoenix Robotics Team of UNICAMP}}{Campinas, Brazil}{07/2021 -- 07/2022}{Established in 2001 by mechatronics engineering students, the Phoenix Robotic Team had, in 2022, 83 undergraduate students from different courses designing, building, and competing with autonomous and radio-controlled robots across 12 categories.\\
+    \topicblock{Head of Team}{\href{https://www.linkedin.com/company/equipe-phoenix/}{Phoenix Robotics Team of UNICAMP}}{Campinas, Brazil}{07/2021 -- 07/2022}{Improve Team Members' selection process, aiming for more diversity, resulting in the best inscription ratio, over 125 people from 500, and resulting in the best percentage of women among the approved, 16 from 35 people.}{Communication, Leadership, and Project/Product Management}
 
-Definition of long-term planning for the Team's departments and projects aiming for sustainable growth, resulting in a new people-driven culture and mission setting short and medium-term targets and deadlines for the 5 area coordinators and the 12 project coordinators.\\
+    \section*{EDUCATION}
+    \topicblock{Auditor for the Master of Embedded Systems and Information Processing}{\href{https://www.universite-paris-saclay.fr/}{Université Paris Saclay}}{Gif-sur-Yvette, France}{09/2024 -- Ongoing}{Embedded Linux, Multisensor Data Fusion and Reasoning under Uncertainty, Scheduling and Kernels for Real-Time Embedded Systems, and Robotic Vision.}{}
+    \topicblock{Computer Engineering Degree, MSc in Robotics}{\href{https://www.ensta-paris.fr/}{ENSTA Paris}, \href{https://www.ip-paris.fr/}{Institut Polytechnique de Paris}}{Palaiseau, France}{07/2022 -- Ongoing}{Machine Learning, Image Analysis and Indexing, Deep Learning, Dynamics and Control of Systems, Kalman Filter, Software Engineering, Parallel Programming, and 3D Segmentation / Vision.}{}
+    \topicblock{Control and Automation Engineering, BSc Engineering}{\href{https://www.fem.unicamp.br/index.php/pt-br/engenharia-mecanica}{FEM}, \href{https://www.unicamp.br/unicamp/universidade}{UNICAMP}}{Campinas, Brazil}{03/2019 -- Ongoing}{}{Double Degree with ENSTA Paris}
 
-Improve Team Members' selection process, aiming for more diversity, resulting in the best inscription ratio, over 125 people from 500, and resulting in the best percentage of women among the approved, 16 from 35 people.}
+    \switchcolumn
 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\linewidth]{tpack/cv/images/profile_social_square.jpg}
+    \end{figure}
 
-\section*{Education}
-\topicblock{MSc Engineering | Double Degree}{\href{https://www.ensta-paris.fr/}{ENSTA Paris}}{Palaiseau, France}{07/2022 -- Ongoing}{Computer Science -- Robotics}
+    \presentation{Engineering student at ENSTA Paris in BAC+5 (Master's level), I am currently seeking a \textbf{final year internship} in software and/or hardware development for:
+        \begin{itemize}[noitemsep, leftmargin=5mm]
+            \item data analysis;
+            \item embedded systems;
+            \item robotics;
+        \end{itemize}
+    starting in April 2025, for a duration of 6 months.}
+    \vspace{5mm}
 
-\topicblock{BSc Engineering | Double Degree}{\href{https://www.unicamp.br/unicamp/universidade}{UNICAMP}}{Campinas, Brazil}{03/2019 -- Ongoing}{Control and Automation -- Mechatronics}
-
-
-\vspace{7.5mm}
-\begin{multicols}{2}
-    \section*{Languages}
+    \section*{LANGUAGES}
     \topicline{Portuguese}{Native}
-    \topicline{French}{Advanced C1}
-    \topicline{English}{Advanced C1}
-    \columnbreak
-    \section*{Skills}
-    \topicline{Programming}{C, LaTeX, MATLAB, Python and VBA}
+
+    \topicline{French}{Advanced\hfill\textbf{C1} (\href{https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions}{CEFR})}
+    \topicline{English}{Advanced\hfill\textbf{C1} (\href{https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions}{CEFR})}
+    \topicline{Spanish}{Beginner\hfill\textbf{A2} (\href{https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions}{CEFR})}
+
+    \section*{SKILLS}
+    \noindent\textbf{Coding:}
+    \vspace{-2.5mm}\begin{table}[h]
+        \centering
+        \begin{tabular}{lll}
+            \textcolor{text_color}{Assembly} & \textcolor{text_color}{C/C++} & \textcolor{text_color}{LaTeX}\\
+            \textcolor{text_color}{Bash} & \textcolor{text_color}{Java} & \textcolor{text_color}{MATLAB}\\
+            \textcolor{text_color}{VHDL} & \textcolor{text_color}{Python} & \textcolor{text_color}{VBA}\\
+        \end{tabular}
+    \end{table}
+
+    \topicline{Tools}{Git, Docker, VSCode and WSL}
+
+    \topicline{Adobe}{Illustrator and Photoshop}
+    \topicline{Electronics}{Altium Designer}
     \topicline{Office}{Excel, PowerPoint and Word}
-    \topicline{Others}{Altium Designer, Adobe Illustrator and Photoshop}
-\end{multicols}
+
+    \topicline{Softskills}{Communication, Leadership, and Project/Product Management}
+
+    \section*{VOLUNTARY}
+    \topicblock{\href{https://openbadgefactory.com/v1/assertion/e93057f5ecd084fbfba3636a1393600d98ce97fe.html}{Paralympic Games Volunteer}}{\href{https://olympics.com/fr/paris-2024}{Paris 2024}}{Villepinte, France}{2024}{}{}
+
+    \division
+
+    \topicblock{Ambassador}{\href{https://www.patronos.org/}{Patronos UNICAMP}}{Campinas, Brazil}{2021}{}{}
+\end{paracol}
 \end{document}
