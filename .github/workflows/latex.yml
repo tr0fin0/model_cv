@@ -11,10 +11,10 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: ./src/cv.tex
+          root_file: cv.tex
 
       - name: Upload PDF
         uses: actions/upload-artifact@v5
         with:
           name: PDF
-          path: ./src/cv.pdf
+          path: cv.pdf
