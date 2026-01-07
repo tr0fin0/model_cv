@@ -1,3 +1,0 @@
-[submodule "tpack"]
-	path = src/tpack
-    url = https://github.com/tr0fin0/tpack.git
