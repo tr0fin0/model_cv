@@ -1,6 +1,15 @@
 name: LaTeX Build
 
-on: [push]
+
+on:
+  push:
+    paths:
+      - '**.tex'
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - '**.tex'
+
 
 jobs:
   LaTeX:
