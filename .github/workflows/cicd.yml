@@ -11,6 +11,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  labeler:
+    name: Add Pull Request Labels
+    permissions:
+        contents: read
+        pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/labeler@v6
+
+
   pull-request-title:
     runs-on: ubuntu-latest
     permissions:
