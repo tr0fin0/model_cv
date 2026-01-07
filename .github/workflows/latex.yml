@@ -3,7 +3,7 @@ name: LaTeX Build
 on: [push]
 
 jobs:
-  build_latex:
+  LaTeX:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -11,10 +11,10 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: cv.tex
+          root_file: ./src/cv.tex
 
       - name: Upload PDF
         uses: actions/upload-artifact@v5
         with:
           name: PDF
-          path: cv.pdf
+          path: ./src/cv.pdf
