@@ -26,6 +26,31 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
+      # Label Based on Branch Name
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.head.ref, 'fix')
+        with:
+          labels: bug
+
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: |
+          startsWith(github.event.pull_request.head.ref, 'doc') ||
+          startsWith(github.event.pull_request.head.ref, 'docs')
+        with:
+          labels: documentation
+
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.head.ref, 'feat')
+        with:
+          labels: enhancement
+
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: |
+          startsWith(github.event.pull_request.head.ref, 'ci') ||
+          startsWith(github.event.pull_request.head.ref, 'maint')
+        with:
+          labels: maintenace
+
 
   pull-request-title:
     runs-on: ubuntu-latest
