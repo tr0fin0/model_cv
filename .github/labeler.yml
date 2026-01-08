@@ -1,0 +1,23 @@
+bug:
+- any:
+  - head-branch: [ '^fix', 'fix' ]
+
+documentation:
+- any:
+  - changed-files:
+    - any-glob-to-any-file: [ 'docs/*' ]
+
+enhancement:
+- any:
+  - head-branch: [ '^feat', 'feat' ]
+
+maintenance:
+- any:
+  - changed-files:
+    - any-glob-to-any-file: [ '.github/**/*' ]
+  - head-branch: [ '^ci', 'ci' ]
+
+testing:
+- any:
+  - changed-files:
+    - any-glob-to-any-file: [ 'tests/*' ]

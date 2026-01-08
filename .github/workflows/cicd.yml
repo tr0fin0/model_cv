@@ -12,13 +12,19 @@ on:
 
 jobs:
   labeler:
-    name: Add Pull Request Labels
+    name: Pull Request Labels
     permissions:
-        contents: read
-        pull-requests: write
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/labeler@v6
+      - uses: actions/checkout@v6
+
+      # Label Based on Modified Files
+      - name: Label Based on Modified Files
+        uses: actions/labeler@v6
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
 
   pull-request-title:
