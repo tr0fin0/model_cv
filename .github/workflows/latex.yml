@@ -13,6 +13,9 @@ on:
 
 jobs:
   LaTeX:
+    name: Compile LaTeX File
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
