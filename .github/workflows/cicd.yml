@@ -29,6 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+
   labeler:
     name: Pull Request Labels
     needs: [sync-labels]
@@ -69,6 +70,26 @@ jobs:
           startsWith(github.event.pull_request.head.ref, 'maint')
         with:
           labels: maintenace
+
+
+  commenter:
+    name: Labels Comment
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Suggest Labels
+      uses: peter-evans/create-or-update-comment@v5
+
+      # Execute only when no labels have been applied to the pull request
+      if: toJSON(github.event.pull_request.labels.*.name) == '{}'
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Please add one of the following labels:
+          - [bug](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Abug+)
+          - [documentation](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Adocumentation+)
+          - [enhancement](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Aenhancement+)
+          - [maintenance](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Amaintenance+)
 
 
   pull-request-title:
