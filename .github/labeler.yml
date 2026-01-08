@@ -6,6 +6,7 @@ documentation:
 - any:
   - changed-files:
     - any-glob-to-any-file: [ 'docs/*' ]
+  - head-branch: [ '^doc', 'docs' ]
 
 enhancement:
 - any:
@@ -15,7 +16,7 @@ maintenance:
 - any:
   - changed-files:
     - any-glob-to-any-file: [ '.github/**/*' ]
-  - head-branch: [ '^ci', 'ci' ]
+  - head-branch: [ '^ci', 'ci', 'maint' ]
 
 testing:
 - any:
