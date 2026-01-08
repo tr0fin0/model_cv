@@ -4,15 +4,30 @@ on:
   pull_request:
     branches: [ "master" ]
     types:
-        - opened
-        - reopened
-        - synchronize
-
+      - edited
+      - labeled
+      - opened
+      - reopened
+      - synchronize
+  push:
+    branches: [ "master" ]
+    paths:
+      - '../labels.yml'
   workflow_dispatch:
 
 jobs:
+  sync-labels:
+    name: Sync Repository Labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: micnncim/action-label-syncer@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   labeler:
     name: Pull Request Labels
+    needs: [sync-labels]
     permissions:
       contents: read
       pull-requests: write
