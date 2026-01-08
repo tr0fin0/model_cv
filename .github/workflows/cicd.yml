@@ -22,6 +22,8 @@ concurrency:
 jobs:
   sync-labels:
     name: Sync Repository Labels
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -74,6 +76,9 @@ jobs:
 
   commenter:
     name: Labels Comment
+    permissions:
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
 
     steps:
