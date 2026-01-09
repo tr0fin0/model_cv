@@ -15,6 +15,9 @@ repos:
   rev: v2.4.1
   hooks:
   - id: codespell
+    args: [
+      "--ignore-words", "translation/vocabulary/en-US/accept.txt", "-w",
+    ]
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v6.0.0
