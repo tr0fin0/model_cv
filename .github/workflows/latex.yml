@@ -2,9 +2,6 @@ name: LaTeX Build
 
 
 on:
-  push:
-    paths:
-      - '**.tex'
   pull_request:
     branches: [ "master" ]
     paths:
