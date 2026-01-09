@@ -1,0 +1,24 @@
+accuiel->accueil
+occurence->occurrence
+appeller->appeler
+parmis->parmi
+atérir->atterrir
+personel->personnel
+celà->cela
+peut-être->peut être
+connection->connexion
+puit->puits
+cauchemard->cauchemar
+professionel->professionnel
+déveloper->développer
+quand à->quant à
+dilemne->dilemme
+rhythme->rythme
+évènement->événement
+soit-disant->soi-disant
+féniant->fainéant
+tord->tort
+hormis->hormis
+volonté->volonté
+langage->langage
+vraisemblable->vraisemblable
