@@ -19,12 +19,12 @@ repos:
     args: ["-w", "-I", "translation/en-US/vocabulary/accept.txt"]
     exclude: '^(translation/fr-FR/|translation/pt-BR/).*'
 
-    id: codespell
+  - id: codespell
     name: Spell Check for fr-FR
     files: '^translation/fr-FR/.*'
     args: ["-w", "-D", "translation/fr-FR/vocabulary/dictionary.txt", "-I", "translation/en-US/vocabulary/accept.txt"]
 
-    id: codespell
+  - id: codespell
     name: Spell Check for pt-BR
     files: '^translation/pt-BR/.*'
     args: ["-w", "-D", "translation/pt-BR/vocabulary/dictionary.txt", "-I", "translation/en-US/vocabulary/accept.txt"]
