@@ -16,9 +16,9 @@ repos:
   hooks:
   - id: codespell
     args: [
-      "--ignore-words", "translation/vocabulary/en-US/accept.txt", "-w",
-      "-D", "translation/vocabulary/fr-FR/dictionary.txt",
-      "-D", "translation/vocabulary/pt-BR/dictionary.txt"
+      "--ignore-words", "translation/en-US/vocabulary/accept.txt", "-w",
+      "-D", "translation/fr-FR/vocabulary/dictionary.txt",
+      "-D", "translation/pt-BR/vocabulary/dictionary.txt"
     ]
 
 - repo: https://github.com/pre-commit/pre-commit-hooks

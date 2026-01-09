@@ -236,7 +236,7 @@ atribuidas->atribuídas
 atribuido->atribuído
 atríbuido->atribuído
 atribuidos->atribuídos
-atris->atriz, actriz, atris
+atris->atriz, actriz, 
 audiencia->audiência
 audiencias->audiências
 ausencia->ausência
@@ -357,7 +357,7 @@ caracteristicas->características
 caracteristico->característico
 caracteristicos->característicos
 carissimo->caríssimo
-cassar->caçar, casar, cassar
+cassar->caçar, casar,
 Castanheira de Pêra->Castanheira de Pera
 catalizada->catalisada
 catalizador->catalisador
@@ -657,30 +657,28 @@ ecessão->exceção
 ecessões->exceções
 eciclopedia->enciclopédia
 eciclopédia->enciclopédia
-economica->económica, econômica
+economica->econômica
 ect->etc
 egipcios->egípcios
 egipsio->egípcio
 elacção->elação
-electrônica->electrónica, eletrônica
-electrônicas->electrónicas, eletrônicas
-electrônico->electrónico, eletrônico
-electrônicos->electrónicos, eletrônicos
+electrônica->eletrônica
+electrônicas->eletrônicas
+electrônico->eletrônico
+electrônicos->eletrônicos
 eletroima->eletroímã
 eletroimã->eletroímã
-eletronica->electrónica, eletrônica
-eletrónica->electrónica, eletrônica
-eletronicas->electrónicas, eletrônicas
-eletrónicas->electrónicas, eletrônicas
-eletronico->electrónico, eletrônico
-eletrónico->electrónico, eletrônico
-eletronico->eletrónico
-eletronicos->electrónicos, eletrônicos
-eletrónicos->electrónicos, eletrônicos
-eletronicos->eletrónicos
+eletronica->eletrônica
+eletrónica->eletrônica
+eletronicas->eletrônicas
+eletrónicas->eletrônicas
+eletronico->eletrônico
+eletrónico->eletrônico
+eletronicos->eletrônicos
+eletrónicos->eletrônicos
 elice->hélice
 em meado->em meados
-emaili->e-mail, email, correio electrónico, correio eletrônico
+emaili->e-mail, email, correio eletrônico
 eminencia->eminência
 eminencias->eminências
 empresario->empresário
@@ -1063,8 +1061,6 @@ iorgute->iogurte
 iper->hiper
 ipopótamo->hipopótamo
 ipslon->ípslon
-irisar->irisar
-Irizar->Irizar
 irmao->irmão
 irmaos->irmãos
 irupção->irrupção
@@ -1092,10 +1088,10 @@ juridicos->jurídicos
 juz->jus
 kilo->quilograma
 kilômetro->quilômetro
-kilometro->quilômetro, quilômetro
-kilómetro->quilômetro, quilômetro
-kilometros->quilómetros, quilômetros
-kilómetros->quilómetros, quilômetros
+kilometro->quilômetro
+kilómetro->quilômetro
+kilometros->quilômetros
+kilómetros->quilômetros
 km2->km²
 Laboratorio->Laboratório
 laboratorios->laboratórios
@@ -1205,10 +1201,10 @@ molaridade->concentração em quantidade de matéria
 mór->mor
 muinto->muito
 muintos->muitos
-multimedia->multimedia, multimídia
-multimedias->multimédias, multimídias
-multimidia->multimídia, multimédia
-multimidias-> multimídias, multimédias
+multimedia->multimídia
+multimedias->multimídias
+multimidia->multimídia
+multimidias->multimídias
 municipio->município
 munícipio->município
 munícípio->município
@@ -1227,9 +1223,8 @@ nacida->nascida
 nacido->nascido
 nacimento->nascimento
 nao->não
-não ->não
 naum->não
-naun ->não
+naun->não
 necessáriamente->necessariamente
 negocios->negócios
 nenum->nenhum
@@ -1406,7 +1401,7 @@ possivel->possível
 possivél->possível
 possue->possui
 possuia->possuía
-pq->porque,porquê,por que,por quê
+pq->porque,porquê,por que,por quê,
 pq? ->por que?
 praca->praça
 práticamente->praticamente
@@ -1509,8 +1504,8 @@ qeu->que
 quandos->quando
 questao->questão
 quilómetro->quilômetro
-quilometro->quilômetro, quilômetro
-quilometros->quilómetros, quilômetros
+quilometro->quilômetro
+quilometros->quilômetros
 quimica->química
 quimicas->químicas
 quimico->químico
@@ -1860,7 +1855,7 @@ varias->várias
 varíavel->variável
 varios->vários
 vasão->vazão
-você ->você
+voce->você
 vc->você
 veiculo->veículo
 veiculos->veículos
