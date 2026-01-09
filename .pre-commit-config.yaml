@@ -18,6 +18,7 @@ repos:
     args: [
       "--ignore-words", "translation/vocabulary/en-US/accept.txt", "-w",
       "-D", "translation/vocabulary/fr-FR/dictionary.txt",
+      "-D", "translation/vocabulary/pt-BR/dictionary.txt"
     ]
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
