@@ -236,7 +236,7 @@ atribuidas->atribuídas
 atribuido->atribuído
 atríbuido->atribuído
 atribuidos->atribuídos
-atris->atriz, actriz, 
+atris->atriz, actriz,
 audiencia->audiência
 audiencias->audiências
 ausencia->ausência
