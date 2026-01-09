@@ -15,11 +15,20 @@ repos:
   rev: v2.4.1
   hooks:
   - id: codespell
-    args: [
-      "--ignore-words", "translation/en-US/vocabulary/accept.txt", "-w",
-      "translation/fr-FR/", "-D", "translation/fr-FR/vocabulary/dictionary.txt",
-      "translation/pt-BR/", "-D", "translation/pt-BR/vocabulary/dictionary.txt"
-    ]
+    name: Spell Check for en-US
+    args: ["-w", "-I", "translation/en-US/vocabulary/accept.txt"]
+    exclude: '^(translation/fr-FR/|translation/pt-BR/).*'
+
+    id: codespell
+    name: Spell Check for fr-FR
+    files: '^translation/fr-FR/.*'
+    args: ["-w", "-D", "translation/fr-FR/vocabulary/dictionary.txt", "-I", "translation/en-US/vocabulary/accept.txt"]
+
+    id: codespell
+    name: Spell Check for pt-BR
+    files: '^translation/pt-BR/.*'
+    args: ["-w", "-D", "translation/pt-BR/vocabulary/dictionary.txt", "-I", "translation/en-US/vocabulary/accept.txt"]
+
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v6.0.0
