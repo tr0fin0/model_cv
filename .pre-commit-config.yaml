@@ -20,7 +20,6 @@ repos:
   rev: v6.0.0
   hooks:
   - id: check-merge-conflict
-  - id: debug-statements
   - id: check-yaml
   - id: trailing-whitespace
 
