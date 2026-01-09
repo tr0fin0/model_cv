@@ -71,7 +71,7 @@ jobs:
           startsWith(github.event.pull_request.head.ref, 'ci') ||
           startsWith(github.event.pull_request.head.ref, 'maint')
         with:
-          labels: maintenace
+          labels: maintenance
 
 
   commenter:
