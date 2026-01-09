@@ -2,6 +2,10 @@
   description: Something isn't working
   color: D42A34
 
+- name: dependencies
+  description: Related with project dependencies
+  color: ffc0cb
+
 - name: documentation
   description: Improvements or additions to documentation
   color: 0677BA
@@ -17,6 +21,10 @@
 - name: maintenance
   description: Package and maintenance related
   color: F78C37
+
+- name: security
+  description: Anything related to security advisories
+  color: FF0000
 
 - name: testing
   description: Anything related to tests
