@@ -1063,8 +1063,8 @@ iorgute->iogurte
 iper->hiper
 ipopótamo->hipopótamo
 ipslon->ípslon
-irisar->irizar
-Irizar->Irisar
+irisar->irisar
+Irizar->Irizar
 irmao->irmão
 irmaos->irmãos
 irupção->irrupção
@@ -1092,8 +1092,8 @@ juridicos->jurídicos
 juz->jus
 kilo->quilograma
 kilômetro->quilômetro
-kilometro->quilómetro, quilômetro
-kilómetro->quilómetro, quilômetro
+kilometro->quilômetro, quilômetro
+kilómetro->quilômetro, quilômetro
 kilometros->quilómetros, quilômetros
 kilómetros->quilómetros, quilômetros
 km2->km²
@@ -1227,7 +1227,7 @@ nacida->nascida
 nacido->nascido
 nacimento->nascimento
 nao->não
-NAUm ->não
+não ->não
 naum->não
 naun ->não
 necessáriamente->necessariamente
@@ -1407,7 +1407,7 @@ possivél->possível
 possue->possui
 possuia->possuía
 pq->porque,porquê,por que,por quê
-pq? ->por que? 
+pq? ->por que?
 praca->praça
 práticamente->praticamente
 preciza->precisa
@@ -1509,7 +1509,7 @@ qeu->que
 quandos->quando
 questao->questão
 quilómetro->quilômetro
-quilometro->quilómetro, quilômetro
+quilometro->quilômetro, quilômetro
 quilometros->quilómetros, quilômetros
 quimica->química
 quimicas->químicas
@@ -1658,12 +1658,12 @@ século 15->século XV
 século 16->século XVI
 século 17->século XVII
 século 18->século XVIII
-seculo 19->século XIX
+século 19->século XIX
 século 19->século XIX
 século 2->século II
-seculo 20->século XX
 século 20->século XX
-seculo 21->século XXI
+século 20->século XX
+século 21->século XXI
 século 21->século XXI
 século 3->século III
 século 4->século IV
@@ -1860,7 +1860,7 @@ varias->várias
 varíavel->variável
 varios->vários
 vasão->vazão
-vc ->você
+você ->você
 vc->você
 veiculo->veículo
 veiculos->veículos
@@ -1883,7 +1883,7 @@ vice prefeito->vice-prefeito
 vice prefeitos->vice-prefeitos
 vice presidente->vice-presidente
 vice presidentes->vice-presidentes
-video game->videogame
+vídeo game->videogame
 video->vídeo
 vídeo-clipe->videoclipe
 vídeo-clipes->videoclipes
