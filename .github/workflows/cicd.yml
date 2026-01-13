@@ -33,8 +33,10 @@ jobs:
 
 
   labeler:
-    name: Pull Request Labels
-    needs: [sync-labels]
+    name: Labels Pull Request
+    needs:
+      - pull-request-title
+      - sync-labels
     permissions:
       contents: read
       pull-requests: write
@@ -75,7 +77,8 @@ jobs:
 
 
   commenter:
-    name: Labels Comment
+    name: Comment Labels Suggestions
+    needs: [ labeler ]
     permissions:
       contents: read
       pull-requests: write
@@ -97,7 +100,7 @@ jobs:
 
 
   pull-request-title:
-    name: Pull Request Name
+    name: Assert Pull Request Name
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
