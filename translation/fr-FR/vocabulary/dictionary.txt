@@ -1318,7 +1318,6 @@ Etats->États
 É-U->États-Unis
 U\.S\.A\.->États-Unis
 USA->États-Unis
-ÉTATS-UNIS.->États-Unis.
 etique->éthique
 etiques->éthiques
 ethique->éthique
@@ -1923,8 +1922,8 @@ groseiller->groseillier
 [Gg]uyanne->Guyane
 Hauts-parleurs->Haut-parleurs
 hauts-parleurs->haut-parleurs
-Hazard->Hasard (anglicisme)
-hazard->hasard (anglicisme)
+Hazard->Hasard
+hazard->hasard
 Héroine->Héroïne
 Héroines->Héroïnes
 héroine->héroïne
@@ -2699,14 +2698,12 @@ Receuilir->Recueillir
 Receuillir->Recueillir
 receuilir->recueillir
 receuillir->recueillir
-Recomandations->Recommandations (anglicisme) (anglicisme)
-Recomendations->Recommandations (anglicisme) (anglicisme)
-Recommandations (anglicisme)->Recommandations (anglicisme) (anglicisme)
-Recommendations->Recommandations (anglicisme) (anglicisme)
-recomandations->recommandations (anglicisme) (anglicisme)
-recomendations->recommandations (anglicisme) (anglicisme)
-recommandations (anglicisme)->recommandations (anglicisme) (anglicisme)
-recommendations->recommandations (anglicisme) (anglicisme)
+Recomandations->Recommandations
+Recomendations->Recommandations
+Recommendations->Recommandations
+recomandations->recommandations
+recomendations->recommandations
+recommendations->recommandations
 Récompences->Récompenses
 récompences->récompenses
 Recompenses->Récompenses
