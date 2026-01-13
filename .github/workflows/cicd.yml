@@ -26,8 +26,8 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: micnncim/action-label-syncer@v1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
+      - uses: micnncim/action-label-syncer@3abd5ab72fda571e69fffd97bd4e0033dd5f495c #v1.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -40,33 +40,33 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
 
       # Label Based on Modified Files
       - name: Label Based on Modified Files
-        uses: actions/labeler@v6
+        uses: actions/labeler@634933edcd8ababfe52f92936142cc22ac488b1b #v6.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       # Label Based on Branch Name
-      - uses: actions-ecosystem/action-add-labels@v1
+      - uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
         if: startsWith(github.event.pull_request.head.ref, 'fix')
         with:
           labels: bug
 
-      - uses: actions-ecosystem/action-add-labels@v1
+      - uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
         if: |
           startsWith(github.event.pull_request.head.ref, 'doc') ||
           startsWith(github.event.pull_request.head.ref, 'docs')
         with:
           labels: documentation
 
-      - uses: actions-ecosystem/action-add-labels@v1
+      - uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
         if: startsWith(github.event.pull_request.head.ref, 'feat')
         with:
           labels: enhancement
 
-      - uses: actions-ecosystem/action-add-labels@v1
+      - uses: actions-ecosystem/action-add-labels@18f1af5e3544586314bbe15c0273249c770b2daf #v1
         if: |
           startsWith(github.event.pull_request.head.ref, 'ci') ||
           startsWith(github.event.pull_request.head.ref, 'maint')
@@ -83,8 +83,7 @@ jobs:
 
     steps:
     - name: Suggest Labels
-      uses: peter-evans/create-or-update-comment@v5
-
+      uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 #v5.0.0
       # Execute only when no labels have been applied to the pull request
       if: toJSON(github.event.pull_request.labels.*.name) == '{}'
       with:
@@ -104,8 +103,8 @@ jobs:
       pull-requests: read
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
 
-      - uses: amannn/action-semantic-pull-request@v6
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50  #v6.1.1
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
