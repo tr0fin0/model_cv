@@ -1318,7 +1318,7 @@ Etats->États
 É-U->États-Unis
 U\.S\.A\.->États-Unis
 USA->États-Unis
-USA.->États-Unis.
+ÉTATS-UNIS.->États-Unis.
 etique->éthique
 etiques->éthiques
 ethique->éthique
@@ -2699,14 +2699,14 @@ Receuilir->Recueillir
 Receuillir->Recueillir
 receuilir->recueillir
 receuillir->recueillir
-Recomandations->Recommandations (anglicisme)
-Recomendations->Recommandations (anglicisme)
-Recommandations->Recommandations (anglicisme)
-Recommendations->Recommandations (anglicisme)
-recomandations->recommandations (anglicisme)
-recomendations->recommandations (anglicisme)
-recommandations->recommandations (anglicisme)
-recommendations->recommandations (anglicisme)
+Recomandations->Recommandations (anglicisme) (anglicisme)
+Recomendations->Recommandations (anglicisme) (anglicisme)
+Recommandations (anglicisme)->Recommandations (anglicisme) (anglicisme)
+Recommendations->Recommandations (anglicisme) (anglicisme)
+recomandations->recommandations (anglicisme) (anglicisme)
+recomendations->recommandations (anglicisme) (anglicisme)
+recommandations (anglicisme)->recommandations (anglicisme) (anglicisme)
+recommendations->recommandations (anglicisme) (anglicisme)
 Récompences->Récompenses
 récompences->récompenses
 Recompenses->Récompenses
