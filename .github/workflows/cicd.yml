@@ -34,7 +34,9 @@ jobs:
 
   labeler:
     name: Pull Request Labels
-    needs: [sync-labels]
+    needs:
+      - pull-request-title
+      - sync-labels
     permissions:
       contents: read
       pull-requests: write
@@ -76,6 +78,7 @@ jobs:
 
   commenter:
     name: Labels Comment
+    needs: [ labeler ]
     permissions:
       contents: read
       pull-requests: write
