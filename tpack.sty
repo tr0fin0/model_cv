@@ -1,6 +1,6 @@
 %% tpack.sty
 %% ---------------------------------------------
-%% A package creeated for cv files
+%% A package created for cv files
 %%
 %% by Guilherme Trofino.
 %% ---------------------------------------------
@@ -148,9 +148,9 @@
 }
 
 \newcommand*{\cvbody}{
-    \IfLanguageName{english}{\subfile{translation/cv_en.tex}}{
-        \IfLanguageName{french}{\subfile{translation/cv_fr.tex}}{
-            \IfLanguageName{portuguese}{\subfile{translation/cv_br.tex}}{
+    \IfLanguageName{english}{\subfile{translation/en-US/cv_en.tex}}{
+        \IfLanguageName{french}{\subfile{translation/fr-FR/cv_fr.tex}}{
+            \IfLanguageName{portuguese}{\subfile{translation/pt-BR/cv_br.tex}}{
                 not defined
             }
         }
@@ -158,9 +158,9 @@
 }
 
 \newcommand*{\cvall}{
-    \subfile{translation/cv_en.tex}
-    \newpage\subfile{translation/cv_fr.tex}
-    \newpage\subfile{translation/cv_br.tex}
+    \subfile{translation/en-US/cv_en.tex}
+    \newpage\subfile{translation/fr-FR/cv_fr.tex}
+    \newpage\subfile{translation/pt-BR/cv_br.tex}
 }
 
 % \newcommand*{}{
