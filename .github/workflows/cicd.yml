@@ -87,6 +87,7 @@ jobs:
     steps:
     - name: Suggest Labels
       uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 #v5.0.0
+
       # Execute only when no labels have been applied to the pull request
       if: toJSON(github.event.pull_request.labels.*.name) == '{}'
       with:
@@ -94,9 +95,13 @@ jobs:
         body: |
           Please add one of the following labels:
           - [bug](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Abug+)
+          - [dependencies](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Adependencies+)
           - [documentation](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Adocumentation+)
           - [enhancement](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Aenhancement+)
+          - [good first issue](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Agood+first+issue+)
           - [maintenance](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Amaintenance+)
+          - [security](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Asecurity+)
+          - [testing](https://github.com/tr0fin0/latex-cv/pulls?q=label%3Atesting+)
 
 
   pull-request-title:
