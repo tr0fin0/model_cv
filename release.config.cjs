@@ -57,13 +57,13 @@ module.exports = {
               c.references = commit.references.slice();
             }
 
-            // shortHash formated as 7 characters
+            // shortHash formatted as 7 characters
             if (commit.hash) {
                 c.shortHash = commit.hash.substring(0, 7);
             } else {
                 c.shortHash = '';
             }
-            
+
             // commitUrl formatted as Markdown
             if (c.shortHash) {
                 c.commitUrl = `([${c.shortHash}](${context.host}/${context.owner}/${context.repository}/commit/${commit.hash}))`
