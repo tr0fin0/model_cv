@@ -10,6 +10,26 @@
         'message': 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
       }
     ],
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        'assets': [
+          {
+            'path': '*.{sty,tex}',
+            'name': 'TeX-${nextRelease.gitTag}',
+            'label': 'TeX source files required for compiling the PDF file on ${nextRelease.gitTag}.'
+          },
+          {
+            'path': '*.pdf',
+            'name': 'PDF-${nextRelease.gitTag}',
+            'label': 'Curriculum Vitae compiled PDF file on ${nextRelease.gitTag}'
+          }
+        ],
+        'failComment': false,
+        'labels': ['bug', 'maintenance'],
+        'releasedLabels': false,
+        'successComment': false,
+      }
+    ]
   ]
 }
